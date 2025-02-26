@@ -16,3 +16,7 @@ Any PDFs placed in this repository will be displayed on the TV outside of 2F6.
 3. Upload or push document to the pi's respective repository
 
 The Pi updates once a day at about 0830, so any changes made to this repository will only take effect the next day.
+
+**How this script works**
+
+pi_disp_setup.sh installs the necessary tools to make this work. display_image.sh uses pull_pdf.sh and clones the dfec-pi repository. The line "for pdf in ~/dfec-pi/pi-1/*.pdf; do" in display_image.sh looks into the cloned repository for pi-1 (will need to be edited to pi-2, pi-3, etc. for other Pi's) and pulls pdfs in those files to display on the TVs.
